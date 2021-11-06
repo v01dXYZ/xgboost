@@ -85,6 +85,11 @@ class MetaInfo {
    * \brief Name for each feature.
    */
   std::vector<std::string> feature_names;
+  /*!
+   * \brief DP bounds for each feature for 'approxDP' tree_method
+   */
+  HostDeviceVector<float> feature_max;
+  HostDeviceVector<float> feature_min;
   /*
    * \brief Type of each feature.  Automatically set when feature_type_names is specifed.
    */
